@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:19:04:19 +0800] "GET /JavaWebBooks/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:19:04:19 +0800] "GET /JavaWebBooks/static/js/main.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:19:04:19 +0800] "GET /favicon.ico HTTP/1.1" 200 21630
+0:0:0:0:0:0:0:1 - - [03/Jan/2019:19:04:19 +0800] "GET /JavaWebBooks/BooksApi/?order=asc&_=1546513459051 HTTP/1.1" 200 1123

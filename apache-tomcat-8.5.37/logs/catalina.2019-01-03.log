@@ -1,0 +1,54 @@
+03-Jan-2019 19:04:12.751 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.37
+03-Jan-2019 19:04:12.756 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 12 2018 12:07:02 UTC
+03-Jan-2019 19:04:12.756 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.37.0
+03-Jan-2019 19:04:12.757 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+03-Jan-2019 19:04:12.757 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            4.15.0-29deepin-generic
+03-Jan-2019 19:04:12.757 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+03-Jan-2019 19:04:12.757 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-11-openjdk-amd64
+03-Jan-2019 19:04:12.757 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           11+13-Debian-2
+03-Jan-2019 19:04:12.758 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+03-Jan-2019 19:04:12.758 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/gendseo/Java/apache-tomcat-8.5.37
+03-Jan-2019 19:04:12.758 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/gendseo/Java/apache-tomcat-8.5.37
+03-Jan-2019 19:04:12.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+03-Jan-2019 19:04:12.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+03-Jan-2019 19:04:12.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+03-Jan-2019 19:04:12.760 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/gendseo/Java/apache-tomcat-8.5.37/conf/logging.properties
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/gendseo/Java/apache-tomcat-8.5.37
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/gendseo/Java/apache-tomcat-8.5.37
+03-Jan-2019 19:04:12.761 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/gendseo/Java/apache-tomcat-8.5.37/temp
+03-Jan-2019 19:04:12.762 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dawt.useSystemAAFontSettings=gasp
+03-Jan-2019 19:04:12.762 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.19]
+03-Jan-2019 19:04:12.762 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+03-Jan-2019 19:04:12.762 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+03-Jan-2019 19:04:12.762 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+03-Jan-2019 19:04:12.765 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.0h  27 Mar 2018]
+03-Jan-2019 19:04:12.806 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+03-Jan-2019 19:04:12.815 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Jan-2019 19:04:12.825 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+03-Jan-2019 19:04:12.826 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+03-Jan-2019 19:04:12.827 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 437 ms
+03-Jan-2019 19:04:12.865 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+03-Jan-2019 19:04:12.866 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.37
+03-Jan-2019 19:04:12.892 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/JavaWebBooks.war]
+03-Jan-2019 19:04:13.288 信息 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+03-Jan-2019 19:04:13.313 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/JavaWebBooks.war] has finished in [420] ms
+03-Jan-2019 19:04:13.314 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/manager]
+03-Jan-2019 19:04:13.339 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/manager] has finished in [25] ms
+03-Jan-2019 19:04:13.339 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/ROOT]
+03-Jan-2019 19:04:13.351 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/ROOT] has finished in [12] ms
+03-Jan-2019 19:04:13.351 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/docs]
+03-Jan-2019 19:04:13.365 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/docs] has finished in [13] ms
+03-Jan-2019 19:04:13.365 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/examples]
+03-Jan-2019 19:04:13.515 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/examples] has finished in [150] ms
+03-Jan-2019 19:04:13.515 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/host-manager]
+03-Jan-2019 19:04:13.530 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/gendseo/Java/apache-tomcat-8.5.37/webapps/host-manager] has finished in [15] ms
+03-Jan-2019 19:04:13.535 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+03-Jan-2019 19:04:13.546 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+03-Jan-2019 19:04:13.549 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 721 ms
+03-Jan-2019 19:05:34.050 信息 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/JavaWebBooks]
+03-Jan-2019 19:05:34.062 警告 [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [JavaWebBooks] registered the JDBC driver [org.postgresql.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
