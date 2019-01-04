@@ -24,8 +24,12 @@ $(document).ready(function () {
     var Bids = [];
     var getSelectRows = $("#table").bootstrapTable("getData", (books) => { return books });
     $.each(getSelectRows, (i, book) => { Bids.push(book.Bid) });
-    var max = Math.max.apply(null, Bids);
-    Bid.val(max + 1);
+    if (Bids.length == 0) {
+    	Bid.val(1);
+    } else {
+    	var max = Math.max.apply(null, Bids);
+    	Bid.val(max + 1);
+    }
     Bname.val('');
     Bnumber.val('');
     myModalLabel.text('添加一本图书');
