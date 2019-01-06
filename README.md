@@ -14,16 +14,17 @@
 ```
 
 ## 开发环境
-- Tomcat >= v8.0
+- Apache Tomcat >= v8.0
 - Eclipse J2EE >= vR12
 - PostgreSQL >= v9.0
+- MySQL >= v5.6
 - Jquery >= v2.0
 - Bootstarp Table >= v1.13.1
 
 ## 数据库表结构
-> 如无意外，请保持数据库表结构一致  
-> 如使用的数据库为 Postgres 不愿手动创建数据库及表，请执行目录中的 p.sql 文件
-
+- 如无意外，请保持数据库表结构一致 
+- 如使用的数据库为 Postgres 不愿手动创建数据库及表，请执行目录中的 p.sql 文件
+- 如使用的数据库为 Mysql 不愿手动创建数据库及表，请执行目录中的 m.sql 文件
 ```
  Bid |         Bname          | Bnumber 
 -----+------------------------+---------
@@ -49,54 +50,56 @@
   20 | SpringBoot 入门       |      76
 ```
 
-
 ## 如何使用
-#### 克隆仓库并进入项目
-> git clone https://github.com/gendseo/JavaWebBooks.git  && cd JavaWebBooks/
-
-#### 运行于 Tomcat
-> 手动将 JavaWebBooks.war 文件放于 Tomcat 根文件夹中的 webapps 的文件夹中  
-> 运行 bin/startup.sh  
-> 浏览器中查看  
+#### 克隆仓库并使用项目
+- git clone https://github.com/gendseo/JavaWebBooks.git  && cd JavaWebBooks/
+- ./run.sh
 
 #### 使用一键运行脚本查看效果
-> 在终端里运行 run.sh 脚本  
-> ./run.sh  
-> 浏览器中查看  
+- 在终端里运行 run.sh 脚本  
+- ./run.sh  
 
 #### 记得停止一键运行脚本
-> 在终端里运行 stop.sh 脚本  
-> ./stop.sh  
+- 在终端里运行 stop.sh 脚本  
+- ./stop.sh 
 
 #### 在 Eclipse 中添加项目
-> 注意，添加的是 JavaWebBooks 中的 JavaWebBooks  
-> File --> Open Projects from File System... --> do something  
+- 注意，添加的是 JavaWebBooks 中的 JavaWebBooks  
+- File --> Open Projects from File System... --> do something  
 
 #### 更换数据库
-> 修改 src 中 top.gendseo.books.dao.BooksDao 中的：  
-> DB_DEIVER, DB_URL, DB_NAME, DB_USER, DB_PASSWORD  
+- 修改 src 中 top.gendseo.books.dao.BooksDao 中的：  
+- DB_DEIVER, DB_URL, DB_USER, DB_PASSWORD  
 
 #### 如何查看前端网页
-> http://localhost:8080/JavaWebBooks/
+- http://localhost:8080/JavaWebBooks/
 
 #### 后端接口地址
-> http://localhost:8080/JavaWebBooks/BooksApi/*
+- http://localhost:8080/JavaWebBooks/BooksApi/*
 
-## 进度（v1.0.0）
+## 进度
 
-#### 开发进度
+### 基本功能
 - [x] 查询图书数据
 - [x] 增加图书数据
 - [x] 删除图书数据
 - [x] 更新图书数据
 - [x] 一键运行Demo的 PostgreSQL 脚本
-- [ ] 一键运行Demo的 MySQL 脚本
+- [x] 一键运行Demo的 MySQL 脚本
 
-#### Issues
+### 版本（v1.0.1）
+
+#### 完成&修复
+- [x] 增加图书ID错误问题
+- [x] 添加一键运行Demo的 MySQL 脚本
+
+### 版本（v1.0.0）
+
+#### 完成&修复
 - [x] 查询图书数据时页面会生成重复数据
 - [x] 优化 Dao 类的业务逻辑
 - [x] 优化 servlet API 响应请求的逻辑
 - [x] 优化后端性能，添加可配置化
-- [x] 优化 JS 代码逻辑问题，并使用 ES6 语法
+- [x] 优化 JS 代码逻辑问题，并部分使用 ES6 语法
 - [x] 优化前端请求逻辑
 - [x] 优化 Jquery 操作表格的 CRUD 时对应的逻辑

@@ -25,10 +25,13 @@ public class BooksDao {
 	 * DB_PASSWORD 连接数据库用户的密码
 	 * */
 	private static final String DB_DEIVER = "org.postgresql.Driver";
-	private static final String DB_URL = "jdbc:postgresql://localhost:5432/";
-	private static final String DB_NAME = "Books";
+	private static final String DB_URL = "jdbc:postgresql://localhost:5432/Books";
 	private static final String DB_USER = "postgres";
 	private static final String DB_PASSWORD = "1";
+//	private static final String DB_DEIVER = "com.mysql.jdbc.Driver";
+//	private static final String DB_URL = "jdbc:mysql://localhost:3306/Books?useUnicode=true&characterEncoding=utf8";
+//	private static final String DB_USER = "root";
+//	private static final String DB_PASSWORD = "1";
 	private static Connection connection = null;
 	
 	/*
@@ -41,7 +44,7 @@ public class BooksDao {
 	 */
 	private static void getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DB_DEIVER);
-		connection = DriverManager.getConnection(DB_URL + DB_NAME, DB_USER, DB_PASSWORD);
+		connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 	}
 	
 	/*
