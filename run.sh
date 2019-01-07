@@ -45,15 +45,18 @@ if [ $wsql == 'M' ] || [ $wsql == 'm' ];then
   echo "请输入 mysql root 密码！！！！！！";
   mysql -uroot -p mysql -N -e "source $basepath/m.sql"
 fi
-pid=$(sudo netstat -lnp | grep 8080)
-pid=${pid#*LISTEN      }
-pid=${pid%/*}
-case "$pid" in
-"")
-  echo "没有检测到 Tomcat 进程！！！";
-  ;;
-esac
-sudo kill -9 $pid
+# 检测8080端口和8005端口
+pid_8080=$(sudo netstat -lnp | grep 8080)
+pid_8080=${pid_8080#*LISTEN      }
+pid_8080=${pid_8080%/*}
+pid_8005=$(sudo netstat -lnp | grep 8005)
+pid_8005=${pid_8005#*LISTEN      }
+pid_8005=${pid_8005%/*}
+if [ $pid_8080 == "" ] && [ $pid_8005 == "" ];then
+  echo "没有检测到 Tomcat 8080, 8005 进程！！！";
+else
+  sudo kill -9 $pid
+fi
 $basepath/apache-tomcat-8.5.37/bin/startup.sh
 echo "-----------------------------------";
 echo "";
