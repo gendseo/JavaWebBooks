@@ -1,5 +1,5 @@
 # JavaWebBooks
-> 一个关于 java web 前后端分离的图书实践
+> 一个关于 java web 前后端分离的图书实践(JSON)
 
 ## 说明
 - 前端(html/jsp)通过 http 请求与后端(servlet)交互;
@@ -16,8 +16,7 @@
 ## 开发环境
 - Apache Tomcat >= v8.0
 - Eclipse J2EE >= vR12
-- PostgreSQL >= v9.0
-- MySQL >= v5.6
+- PostgreSQL >= v9.0 / MySQL >= v5.6
 - Jquery >= v2.0
 - Bootstarp Table >= v1.13.1
 
@@ -36,8 +35,8 @@
    6 | 算法导论               |      32
    7 | C++11 标准库           |     182
    8 | 高性能 MySQL           |      12
-   9 | Linux 服务器架设与维护   |      76
-  10 | 系统架构设计师入门       |      66
+   9 | Linux 服务器架设与维护  |      76
+  10 | 系统架构设计师入门      |      66
   11 | BootstrapTable 教程    |      52
   12 | Kotlin 入门教程        |     182
   13 | Flutter 实战           |     712
@@ -47,7 +46,7 @@
   17 | 深度学习               |    1282
   18 | Redis 开发与运维       |     127
   19 | Nginx_Lua 高性能实践   |     376
-  20 | SpringBoot 入门       |      76
+  20 | SpringBoot 入门        |      76
 ```
 
 ## 如何使用
@@ -56,26 +55,26 @@
 - ./run.sh
 
 #### 使用一键运行脚本查看效果
-- 在终端里运行 run.sh 脚本  
-- ./run.sh  
+- 在终端里运行 run.sh 脚本
+- ./run.sh
 
 #### 记得停止一键运行脚本
-- 在终端里运行 stop.sh 脚本  
-- ./stop.sh 
+- 在终端里运行 stop.sh 脚本
+- ./stop.sh
 
 #### 在 Eclipse 中添加项目
-- 注意，添加的是 JavaWebBooks 中的 JavaWebBooks  
-- File --> Open Projects from File System... --> do something  
+- 注意，添加的是 JavaWebBooks 中的 JavaWebBooks 文件夹
+- File --> Open Projects from File System... --> JavaWebBooks --> JavaWebBooks
 
 #### 更换数据库
-- 修改 src 中 top.gendseo.books.dao.BooksDao 中的：  
-- DB_DEIVER, DB_URL, DB_USER, DB_PASSWORD  
+- 修改 src 中 top.gendseo.books.dao.BooksDao 中的：
+- DB_DEIVER, DB_URL, DB_USER, DB_PASSWORD
 
 #### 如何查看前端网页
 - http://localhost:8080/JavaWebBooks/
 
 #### 后端接口地址
-- http://localhost:8080/JavaWebBooks/BooksApi/*
+- http://localhost:8080/JavaWebBooks/BooksApi/
 
 ## 进度
 
@@ -84,18 +83,42 @@
 - [x] 增加图书数据
 - [x] 删除图书数据
 - [x] 更新图书数据
-- [x] 一键运行Demo的 PostgreSQL 脚本
-- [x] 一键运行Demo的 MySQL 脚本
+- [x] PostgreSQL SQL脚本
+- [x] MySQL SQL脚本
+- [x] 一键停止 Demo 的 Shell 脚本
+- [x] 一键停止 Demo 的 Shell 脚本
 
 ### 版本（v1.0.1）
 
-#### 完成&修复
-- [x] 增加图书ID错误问题
-- [x] 添加一键运行Demo的 MySQL 脚本
+#### 将要做
+- [ ] 优化前端 mian.js 的性能，并全部使用 es6 语法(箭头函数，在语法上更严谨)
+- [ ] 优化后端 Dao类, POJO实体类, Servlet_API 的性能
+
+#### 完成
+- [x] MySQL SQL脚本
+- [x] run.sh 一件运行 Demo 的 Shell 脚本
+- [x] stop.sh 一件停止 Demo 的 Shell 脚本
+
+#### 修复
+- [x] 优化 8080, 8005 端口的检测、停止
+- [x] 优化并打磨 run.sh
 
 ### 版本（v1.0.0）
 
-#### 完成&修复
+#### 将要做
+- [ ] MySQL SQL脚本
+- [ ] run.sh 一件运行 Demo 的 Shell 脚本
+- [ ] stop.sh 一件停止 Demo 的 Shell 脚本
+
+#### 完成
+- [x] 查询图书数据
+- [x] 增加图书数据
+- [x] 删除图书数据
+- [x] 更新图书数据
+- [x] PostgreSQL SQL脚本
+
+#### 修复
+- [x] 增加图书ID错误问题
 - [x] 查询图书数据时页面会生成重复数据
 - [x] 优化 Dao 类的业务逻辑
 - [x] 优化 servlet API 响应请求的逻辑
