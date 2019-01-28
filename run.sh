@@ -43,14 +43,17 @@ pid_8080=$(echo $pid_8080 | awk '{if($1~/[0-9]+/) print $1}')
 pid_8005=$(lsof -i:8005 | awk '{if($2~/[0-9]+/) print $2}')
 pid_8005=$(echo $pid_8005 | awk '{if($1~/[0-9]+/) print $1}')
 if [[ $pid_8080 != "" ]] && [[ $pid_8005 != "" ]];then
-  kill -9 $pid_8080
-  kill -9 $pid_8005
+  if [[ $pid_8080 == $pid_8005 ]]; then
+    kill -9 $pid_8080
+  else
+    kill -9 $pid_8005
+  fi
 fi
 echo "----------------------------------------------";
 $basepath/apache-tomcat-8.5.37/bin/startup.sh
 echo "----------------------------------------------";
 echo "项目初始化完成！！！！！！";
-echo "请点击按住Ctrl点击下面链接查看效果！！！！！！";
+echo "请按住Ctrl点击下面链接查看效果！！！！！！";
 echo "----------------------------------------------";
 echo "http://localhost:8080/JavaWebBooks/";
 echo "----------------------------------------------";

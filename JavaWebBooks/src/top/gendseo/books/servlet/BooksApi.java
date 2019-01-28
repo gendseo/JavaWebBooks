@@ -60,14 +60,15 @@ public class BooksApi extends HttpServlet {
     response.setContentType("application/plain");
     response.setCharacterEncoding("UTF-8");
     request.setCharacterEncoding("UTF-8");
+    String result;
+    PrintWriter out;
+    
 
     if (request.getRequestURI().equals("/JavaWebBooks/BooksApi/DELETE")) {
-      System.out.println("delete");
       String Bid = request.getParameter("Bid");
-      String result;
       try {
         result = BooksDao.DELETE(Bid);
-        PrintWriter out = response.getWriter();
+        out = response.getWriter();
         out.write(result);
         out.flush();
         out.close();
@@ -79,16 +80,12 @@ public class BooksApi extends HttpServlet {
     }
 
     if (request.getRequestURI().equals("/JavaWebBooks/BooksApi/UPDATE")) {
-      System.out.println("update");
-
       BufferedReader reader = request.getReader();
       String json = reader.readLine();
-      System.out.println(json);
       reader.close();
-      String result;
       try {
         result = BooksDao.UPDATE(json);
-        PrintWriter out = response.getWriter();
+        out = response.getWriter();
         out.write(result);
         out.flush();
         out.close();
@@ -99,16 +96,12 @@ public class BooksApi extends HttpServlet {
     }
 
     if (request.getRequestURI().equals("/JavaWebBooks/BooksApi/INSERT")) {
-      System.out.println("insert");
-
       BufferedReader reader = request.getReader();
       String json = reader.readLine();
-      System.out.println(json);
       reader.close();
-      String result;
       try {
         result = BooksDao.INSERT(json);
-        PrintWriter out = response.getWriter();
+        out = response.getWriter();
         out.write(result);
         out.flush();
         out.close();

@@ -24,14 +24,14 @@ public class BooksDao {
 	 * DB_USER 连接数据库的用户
 	 * DB_PASSWORD 连接数据库用户的密码
 	 * */
-	private static final String DB_DEIVER = "org.postgresql.Driver";
-	private static final String DB_URL = "jdbc:postgresql://localhost:5432/Books";
-	private static final String DB_USER = "postgres";
-	private static final String DB_PASSWORD = "1";
-//	private static final String DB_DEIVER = "com.mysql.jdbc.Driver";
-//	private static final String DB_URL = "jdbc:mysql://localhost:3306/Books?useUnicode=true&characterEncoding=utf8";
-//	private static final String DB_USER = "root";
+//	private static final String DB_DEIVER = "org.postgresql.Driver";
+//	private static final String DB_URL = "jdbc:postgresql://localhost:5432/Books";
+//	private static final String DB_USER = "postgres";
 //	private static final String DB_PASSWORD = "1";
+	private static final String DB_DEIVER = "com.mysql.jdbc.Driver";
+	private static final String DB_URL = "jdbc:mysql://localhost:3306/Books?useUnicode=true&characterEncoding=utf8";
+	private static final String DB_USER = "root";
+	private static final String DB_PASSWORD = "1";
 	private static Connection connection = null;
 	
 	/*
@@ -184,7 +184,7 @@ public class BooksDao {
 		// 使用 Gson 将 JSON 转换成 POJO 实体类 Book
 		Book book = gson.fromJson(json, Book.class);
 		String sql = "INSERT INTO books (\"Bid\", \"Bname\", \"Bnumber\") VALUES (?, ?, ?);";
-		 System.out.println(sql);
+		System.out.println(sql);
 		 
 		ps = connection.prepareStatement(sql);
 		ps.setInt(1, book.getBid());
@@ -194,18 +194,5 @@ public class BooksDao {
 		
 		getClose(connection, null, ps, null);
 		return "true";
-	}
-	
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// 查询
-		System.out.println(Query());
-		// 删除
-//		System.out.println(DELETE("1,2,3"));
-		// 增加
-//		System.out.println(INSERT("{\"Bid\":1,\"Bname\":\"Javascript 高级编程\",\"Bnumber\":4}"));
-		// 更新
-//		System.out.println(UPDATE("{\"Bid\":1,\"Bname\":\"颈椎病康复\",\"Bnumber\":40}"));
-		// 查询
-//		System.out.println(Query());
 	}
 }

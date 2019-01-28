@@ -1,10 +1,10 @@
 /**
  * author: gendseo
  * time: 2019-01-02
- * update: change to es6
+ * update: change to es6 and use ? :
  */
 
-$(document).ready(function () {
+$(document).ready(() => {
   /**
    * 全局配置
    */
@@ -19,16 +19,16 @@ $(document).ready(function () {
   // 初始化表格插件
   InitTable();
 
-  $("#btn_add").click(function () {
-	Bnumber.css("border-color", "#ccc");
+  $("#btn_add").click(() => {
+    Bnumber.css("border-color", "#ccc");
     var Bids = [];
     var getSelectRows = $("#table").bootstrapTable("getData", (books) => { return books });
     $.each(getSelectRows, (i, book) => { Bids.push(book.Bid) });
     if (Bids.length == 0) {
-    	Bid.val(1);
+      Bid.val(1);
     } else {
-    	var max = Math.max.apply(null, Bids);
-    	Bid.val(max + 1);
+      var max = Math.max.apply(null, Bids);
+      Bid.val(max + 1);
     }
     Bname.val('');
     Bnumber.val('');
@@ -37,8 +37,8 @@ $(document).ready(function () {
     myModal.modal('show');
   });
 
-  $("#btn_edit").click(function () {
-	Bnumber.css("border-color", "#ccc");
+  $("#btn_edit").click(() => {
+    Bnumber.css("border-color", "#ccc");
     var getSelectRows = $("#table").bootstrapTable("getSelections", (books) => { return books });
     if (getSelectRows.length != 1) {
       alert("没有选中行或者选了多行");
@@ -53,7 +53,7 @@ $(document).ready(function () {
     }
   });
 
-  BtnSubmit.click(function () {
+  BtnSubmit.click(() => {
     var btn_status = BtnSubmit.attr("form");
     var reg = new RegExp("^[0-9]*$");
     if (!reg.test(Bnumber.val()) || Bnumber.val() > 9999) {
@@ -79,11 +79,7 @@ $(document).ready(function () {
           dataType: "text",
           data: JSON.stringify(UPDATE_JSON),
           success: (result) => {
-            if (result === "true") {
-              $("#table").bootstrapTable("refresh", {});
-            } else {
-              alert("更新操作未成功");
-            }
+            result === "true" ? $("#table").bootstrapTable("refresh", {}) : alert("更新操作未成功");
           },
         });
       }
@@ -100,16 +96,11 @@ $(document).ready(function () {
           dataType: "text",
           data: JSON.stringify(INSERT_JSON),
           success: (result) => {
-            if (result === "true") {
-              $("#table").bootstrapTable("refresh", {});
-            } else {
-              alert("增加操作未成功");
-            }
+            result === "true" ? $("#table").bootstrapTable("refresh", {}) : alert("增加操作未成功");
           },
         });
       }
     }
-
   });
 
   $("#btn_delete").click(function () {
@@ -119,10 +110,7 @@ $(document).ready(function () {
       $.each(getSelectRows, (i, book) => { s = s + book.Bid + ',' });
       s = s.substring(0, s.length - 1);
       $.post(URL + 'DELETE', { Bid: s }, (result) => {
-          if (result === "true") {
-            $("#table").bootstrapTable("refresh",
-              function () {});
-          }
+        if (result === "true") $("#table").bootstrapTable("refresh", () => {});
       });
     } else {
       alert("未选择行");
@@ -170,22 +158,22 @@ $(document).ready(function () {
       idField: 'Bid',
       //字段和列名
       columns: [{
-          checkbox: true,
-        },
-        {
-          field: 'Bid',
-          title: '书号',
-          sortable: true,
-        },
-        {
-          field: 'Bname',
-          title: '书名'
-        },
-        {
-          field: 'Bnumber',
-          title: '图书数量',
-          sortable: true,
-        },],
+        checkbox: true,
+      },
+      {
+        field: 'Bid',
+        title: '书号',
+        sortable: true,
+      },
+      {
+        field: 'Bname',
+        title: '书名'
+      },
+      {
+        field: 'Bnumber',
+        title: '图书数量',
+        sortable: true,
+      },],
     });
   }
 });

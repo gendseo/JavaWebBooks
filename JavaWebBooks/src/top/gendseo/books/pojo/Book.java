@@ -2,7 +2,7 @@ package top.gendseo.books.pojo;
 
 /*
  * 定义 pojo 实体类使用 Gson 直接将 Class 转换成 JSON 
- * pojo 实体类 Books，结构如下：
+ * pojo 实体类 Book，结构如下：
  * 
  * {
  *     "Bid": 1, 
